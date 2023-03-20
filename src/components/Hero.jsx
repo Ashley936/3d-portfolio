@@ -20,7 +20,7 @@ const Hero = () => {
         inset={0}
         top={'120px'}
         maxW='7xl'
-        mx='auto'
+        mx={{ base: 'auto', lg: '10vw' }}
         padding='16px'
         alignItems={'flex-start'}
         gap={5}
@@ -52,13 +52,8 @@ const Hero = () => {
 
       <ComputersCanvas />
 
-      <Center
-        pos='absolute'
-        bottom={['10px', '32px']}
-        w='full'
-        className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'
-      >
-        <Link to='#about'>
+      <Center pos='absolute' bottom={['10px', '32px']} w='full'>
+        <a href='#about'>
           <Flex
             w='35px'
             h='64px'
@@ -85,7 +80,7 @@ const Hero = () => {
               }}
             />
           </Flex>
-        </Link>
+        </a>
       </Center>
     </Box>
   );

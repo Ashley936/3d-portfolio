@@ -14,15 +14,18 @@ const theme = extendTheme({
     'black-200': '#090325',
     'white-100': '#f3f3f3',
   },
-  variants: {
-    card: {
-      boxShadow: '0px 35px 120px -15px #211e35',
+  /* components: {
+    Heading: {
+      variants: {
+        sectionHeadText: {
+          color: 'white',
+          fontWeight: 'black',
+        },
+        red: { bg: 'red' },
+      },
     },
-    'hero-pattern': {
-      backgroundImage: "url('./src/assets/herobg.png')",
-    },
-    red: { bg: 'red' },
   },
+ */
   fonts: {
     heading: `'Poppins', sans-serif`,
     body: `'Poppins', sans-serif`,

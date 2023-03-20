@@ -42,11 +42,11 @@ export const navLinks = [
 
 const services = [
   {
-    title: 'Web Developer',
+    title: 'React Developer',
     icon: web,
   },
   {
-    title: 'React Native Developer',
+    title: 'Machine Learning',
     icon: mobile,
   },
   {
@@ -54,7 +54,7 @@ const services = [
     icon: backend,
   },
   {
-    title: 'Content Creator',
+    title: 'UI/UX Design',
     icon: creator,
   },
 ];
@@ -124,8 +124,6 @@ const experiences = [
     points: [
       'Developing and maintaining web applications using React.js and other related technologies.',
       'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
     ],
   },
   {
@@ -137,8 +135,6 @@ const experiences = [
     points: [
       'Developing and maintaining web applications using React.js and other related technologies.',
       'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
     ],
   },
   {
@@ -150,8 +146,6 @@ const experiences = [
     points: [
       'Developing and maintaining web applications using React.js and other related technologies.',
       'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
     ],
   },
   {
@@ -163,8 +157,6 @@ const experiences = [
     points: [
       'Developing and maintaining web applications using React.js and other related technologies.',
       'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
     ],
   },
 ];

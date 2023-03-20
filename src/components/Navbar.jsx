@@ -13,6 +13,7 @@ import {
   UnorderedList,
   VStack,
 } from '@chakra-ui/react';
+//import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [active, setActive] = useState('');
@@ -86,9 +87,9 @@ const Navbar = () => {
               }}
               onClick={() => setActive(nav.title)}
             >
-              <Link to={`#${nav.id}`} _hover={{ textDecor: 'none' }}>
+              <a href={`#${nav.id}`} _hover={{ textDecor: 'none' }}>
                 {nav.title}
-              </Link>
+              </a>
             </ListItem>
           ))}
         </UnorderedList>
@@ -147,9 +148,9 @@ const Navbar = () => {
                     cursor: 'pointer',
                   }}
                 >
-                  <Link to={`#${nav.id}`} _hover={{ textDecor: 'none' }}>
+                  <a href={`#${nav.id}`} _hover={{ textDecor: 'none' }}>
                     {nav.title}
-                  </Link>
+                  </a>
                 </Text>
               ))}
             </VStack>
