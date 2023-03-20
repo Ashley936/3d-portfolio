@@ -28,7 +28,7 @@ const App = () => {
         <Experience />
         <Tech />
         <Works />
-        <Feedbacks /> {/* WON'T DO */}
+        {/* <Feedbacks /> */} {/* WON'T DO */}
         <Box pos='relative' zIndex={0}>
           <Contact />
           <StarsCanvas />

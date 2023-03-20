@@ -91,7 +91,7 @@ const About = () => {
         fontSize={{ base: '14px', md: '17px' }}
         maxW='3xl'
         lineHeight={{ base: '25px', md: '30px' }}
-        color='secondary' // may change
+        color='secondary'
       >
         I'm a skilled software developer with experience in TypeScript and
         JavaScript, and expertise in frameworks like React, Node.js, and
