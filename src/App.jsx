@@ -16,7 +16,7 @@ const App = () => {
     <BrowserRouter>
       <Box pos='relative' zIndex={0} bg={'primary'}>
         <Box
-          bgImg={"url('/src/assets/herobg.png')"}
+          bgImg={"url('./src/assets/herobg.png')"}
           bgPos='center'
           bgSize={'cover'}
           bgRepeat='no-repeat'
