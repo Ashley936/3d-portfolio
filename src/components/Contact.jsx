@@ -84,7 +84,7 @@ const Contact = () => {
         variants={slideIn('left', 'tween', 0.2, 1)}
         flex={0.75}
         minW={{ lg: '390px' }}
-        bg={'blackAlpha.500'}
+        bg={'rgb(16, 13, 37)'}
         p={8}
         rounded='2xl'
         // className='flex-[0.75]'
@@ -157,10 +157,10 @@ const Contact = () => {
             </FormControl>
 
             <Button
-              bg='tertiary'
+              bg='#30276F'
               py={3}
               px={8}
-              rounded='xl'
+              rounded='lg'
               outlineColor='transparent'
               w='fit-content'
               color={'white'}

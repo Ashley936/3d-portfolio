@@ -9,6 +9,13 @@
   color-scheme: dark;
 }
 
+.Typewriter {
+  display: inline;
+}
+.Typewriter__cursor {
+  font-weight: 200;
+}
+
 .cardTilt {
   flex: 1;
   /*  box-shadow: 0px 35px 120px -15px #211e35; */

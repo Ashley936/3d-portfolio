@@ -1,5 +1,6 @@
 import { Box, Heading } from '@chakra-ui/react';
 import { BrowserRouter } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import {
   About,
   Contact,
@@ -11,22 +12,47 @@ import {
   Tech,
   Works,
 } from './components';
+import { SkillPage } from './components/mobile/Skills';
 const App = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    // Add a listener for changes to the screen size
+    const mediaQuery = window.matchMedia('(max-width: 600px)');
+
+    // Set the initial value of the `isMobile` state variable
+    setIsMobile(mediaQuery.matches);
+
+    // Define a callback function to handle changes to the media query
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches);
+    };
+
+    // Add the callback function as a listener for changes to the media query
+    mediaQuery.addEventListener('change', handleMediaQueryChange);
+
+    // Remove the listener when the component is unmounted
+    return () => {
+      mediaQuery.removeEventListener('change', handleMediaQueryChange);
+    };
+  }, []);
   return (
     <BrowserRouter>
       <Box pos='relative' zIndex={0} bg={'primary'}>
         <Box
+          bg='tertiary'
           bgImg={"url('./src/assets/herobg.png')"}
           bgPos='center'
           bgSize={'cover'}
           bgRepeat='no-repeat'
         >
           <Navbar />
-          <Hero />
+          <Hero isMobile={isMobile} />
         </Box>
         <About />
-        <Experience />
-        <Tech />
+        <Box overflowX={'hidden'}>
+          <Experience />
+        </Box>
+        {isMobile ? <SkillPage /> : <Tech />}
         <Works />
         {/* <Feedbacks /> */} {/* WON'T DO */}
         <Box pos='relative' zIndex={0}>
@@ -37,5 +63,7 @@ const App = () => {
     </BrowserRouter>
   );
 };
-
+// fine tune some changes
+// delete skill balls, earth, comp for mobile
+// and use the second portfolio parts
 export default App;

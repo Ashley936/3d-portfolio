@@ -9,10 +9,13 @@ import {
   Link,
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
+import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
+import TypewriterComponent from 'typewriter-effect';
 import { ComputersCanvas } from './canvas';
+import { Socials } from './mobile/Socials';
 
 const MotionBox = motion(Box);
-const Hero = () => {
+const Hero = ({ isMobile }) => {
   return (
     <Box as='section' pos='relative' w='full' mx='auto' h={'100vh'}>
       <HStack
@@ -39,19 +42,44 @@ const Hero = () => {
             </Text>
           </Heading>
           <Text
-            fontSize={'lg'}
-            mt={3}
+            fontSize={'17px'}
+            mt={4}
             color={'whiteAlpha.900'}
             className={`heroSubText`}
-            maxW={{ base: '350px', md: 'fit-content' }}
+            maxW={'450px'}
           >
-            I am a full-stack web developer from India
+            I am a full-stack Web developer from India. I love working on
+            creative and unique projects. I am currently{' '}
+            <TypewriterComponent
+              className='HomePage-typewriter'
+              options={{
+                strings: [
+                  'studying engineering.',
+                  'doing freelancing.',
+                  'learning DSA.',
+                ],
+                cursor: `<span style={{fontSize: "3rem"}}>|</span>`,
+                delay: 100,
+                autoStart: true,
+                loop: true,
+              }}
+            />{' '}
           </Text>
+          <Text></Text>
         </Box>
       </HStack>
 
-      <ComputersCanvas />
-
+      {!isMobile && <ComputersCanvas isMobile={isMobile} />}
+      {isMobile && (
+        <>
+          <Box pos='absolute' bottom='25%' left='20%'>
+            <Socials icon={FaGithub} />
+          </Box>
+          <Box pos='absolute' bottom='33%' right='20%'>
+            <Socials icon={FaLinkedinIn} />
+          </Box>
+        </>
+      )}
       <Center pos='absolute' bottom={['10px', '32px']} w='full'>
         <a href='#about'>
           <Flex
