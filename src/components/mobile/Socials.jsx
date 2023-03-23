@@ -9,7 +9,7 @@ export const Socials = ({ icon }) => {
       h={'100px'}
       transition='0.5s'
       cursor='pointer'
-      boxShadow={'-20px 10px 10px rgba(0, 139, 139,.2)'}
+      boxShadow={'-20px 10px 10px rgba(0, 139, 139,.5)'}
       transform={
         'perspective(1000px) rotate(-35deg) skew(25deg) translate(0,0)'
       }

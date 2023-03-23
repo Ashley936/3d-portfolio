@@ -13,6 +13,8 @@ import {
   Works,
 } from './components';
 import { SkillPage } from './components/mobile/Skills';
+import { BgContactCanvas } from './components/mobile/BgContactCanvas';
+import { herobgMin } from './assets';
 const App = () => {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
@@ -40,11 +42,7 @@ const App = () => {
       <Box pos='relative' zIndex={0} bg={'primary'}>
         <Box
           bg='primary'
-          bgImg={
-            isMobile
-              ? "url('./src/assets/herobg-min.png')"
-              : "url('./src/assets/herobg.png')"
-          }
+          bgImg={herobgMin}
           bgPos='center'
           bgSize={'cover'}
           bgRepeat='no-repeat'
@@ -61,7 +59,8 @@ const App = () => {
         {/* <Feedbacks /> */} {/* WON'T DO */}
         <Box pos='relative' zIndex={0}>
           <Contact />
-          <StarsCanvas />
+          {isMobile && <BgContactCanvas />}
+          {!isMobile && <StarsCanvas />}
         </Box>
       </Box>
     </BrowserRouter>
@@ -70,4 +69,7 @@ const App = () => {
 // fine tune some changes
 // delete skill balls, earth, comp for mobile
 // and use the second portfolio parts
+
+// change img format and try ✅
+// remove stars and try ✅
 export default App;
